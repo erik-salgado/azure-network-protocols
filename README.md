@@ -35,3 +35,33 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Filter traffic by "icmp". Observations/notes: This will stop spam traffic and will only filter out ICMP traffic. ICMP (Internet Control Messaging Protocol) This is the protocol that ping uses. Ping is used to test connectivity to different hosts on the internet, on the network and between VMs.
 
 ![Screenshot 2024-07-03 204708](https://github.com/erik-salgado/Azure-Networking/assets/173113320/393c929c-8670-4ae6-98af-384643684a23)
+
+- Open Powershell and Ping VM2 (Linux) from within VM1 (Windows 10 Pro) Observations: you will need to find VM2 Private IP address from the Azure Portal in order to continue. Connection will be established successfully after pinging.
+
+![Screenshot 2024-07-03 205001](https://github.com/erik-salgado/Azure-Networking/assets/173113320/4d8fd403-3808-4416-830b-c78fde4f1206)
+
+![Screenshot 2024-07-03 205054](https://github.com/erik-salgado/Azure-Networking/assets/173113320/66a87a67-b483-402c-9b73-c04bc8c36e20)
+
+![Screenshot 2024-07-03 205128](https://github.com/erik-salgado/Azure-Networking/assets/173113320/139457f2-7950-4608-98ec-1e46a9edfb4a)
+
+- Ping "www.google.com -4" Observations: This will force it to use IP4 Address
+
+![Screenshot 2024-07-03 205304](https://github.com/erik-salgado/Azure-Networking/assets/173113320/2bf4893e-466d-4422-b075-7e4c5330f0c6)
+
+![Screenshot 2024-07-03 205405](https://github.com/erik-salgado/Azure-Networking/assets/173113320/e73a0d80-4723-4b61-9c1d-fb0a283fa72d)
+
+- Clear Data and initiate a perpetual ping. Observations: This will be a non-stop ping.
+
+![Screenshot 2024-07-03 205456](https://github.com/erik-salgado/Azure-Networking/assets/173113320/b6c18cce-e78b-4d01-a631-7e9525722fee)
+
+![Screenshot 2024-07-04 110338](https://github.com/erik-salgado/Azure-Networking/assets/173113320/b9ed386f-c093-45b1-90af-63d842daa31c)
+
+- On the Azure Portal go to VM2 Security Groups and create a rule that will blocks ICMP traffic. Observations: On the inbound rule, change the protocol to ICMPv4. Change Action to deny. Set Priority to 200. Name the Rule. Click Add. You will notice in Powershell that the connection well timed out as a result of the new security rule.
+
+![Screenshot 2024-07-04 083725](https://github.com/erik-salgado/Azure-Networking/assets/173113320/e7e876af-a87f-4d27-8d20-4cb96bbe61e6)
+![Screenshot 2024-07-04 083900](https://github.com/erik-salgado/Azure-Networking/assets/173113320/53d2d1ff-de04-4942-885f-e700ba01f57d)
+![Screenshot 2024-07-04 083916](https://github.com/erik-salgado/Azure-Networking/assets/173113320/6cdfb06e-b2db-42d6-8f6d-c1cbf480e8ec)
+![Screenshot 2024-07-04 084148](https://github.com/erik-salgado/Azure-Networking/assets/173113320/f93c4302-c6c5-4b5e-8d18-0b6a19dfd8ce)
+![Screenshot 2024-07-04 084213](https://github.com/erik-salgado/Azure-Networking/assets/173113320/9086595b-ceb2-49d7-97d9-754f76e38860)
+
+

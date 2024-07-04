@@ -67,7 +67,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ![Screenshot 2024-07-04 084420](https://github.com/erik-salgado/azure-network-protocols/assets/173113320/924dd1ab-660c-4380-b7fa-2e62b57392f9)
 
 
-- Go back to the Azure Portal for VM2 and allow IMCP traffic to go through. Observations: You will start receiving replys back as a result of the new rule change.
+- Go back to the Azure Portal for VM2 and allow ICMP traffic to go through. Observations: You will start receiving replys back as a result of the new rule change.
 
 ![Screenshot 2024-07-04 084513](https://github.com/erik-salgado/azure-network-protocols/assets/173113320/42e523a2-5c0d-4403-8c6f-3da423d77e86)
 ![Screenshot 2024-07-04 084610](https://github.com/erik-salgado/azure-network-protocols/assets/173113320/7b1dc3a8-bb65-42b2-baa9-fa47d2be83b5)
